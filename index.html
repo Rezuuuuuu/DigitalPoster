@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Early Childhood Teacher's Role | Health, Safety, Nutrition & Wellbeing</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #fdf8f0;
+  --warm-white: #fffcf5;
+  --charcoal: #1c1c1c;
+  --p1-primary: #c0392b;
+  --p1-secondary: #1a2e4a;
+  --p1-accent: #f39c12;
+  --p1-light: #fde8e5;
+  --p2-primary: #1e6b3a;
+  --p2-secondary: #0d3b21;
+  --p2-accent: #f1c40f;
+  --p2-light: #e8f5ed;
+  --p3-primary: #b5651d;
+  --p3-secondary: #1a4d4d;
+  --p3-accent: #27ae60;
+  --p3-light: #fdf0e0;
+  --p4-primary: #6c3483;
+  --p4-secondary: #1a1a4a;
+  --p4-accent: #e91e8c;
+  --p4-light: #f3e8f9;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--charcoal);
+  overflow-x: hidden;
+}
+
+/* ========== HERO ========== */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(145deg, #1a2e4a 0%, #0d1f2d 40%, #1e4d3a 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 20% 80%, rgba(193,57,43,0.18) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 20%, rgba(30,107,58,0.2) 0%, transparent 50%),
+                    radial-gradient(circle at 50% 50%, rgba(241,196,15,0.07) 0%, transparent 60%);
+}
+
+.hero-badge {
+  background: rgba(241,196,15,0.15);
+  border: 1px solid rgba(241,196,15,0.4);
+  color: #f1c40f;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 7px 20px;
+  border-radius: 30px;
+  margin-bottom: 28px;
+  position: relative;
+  animation: fadeDown 0.8s ease both;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  line-height: 1.1;
+  max-width: 820px;
+  position: relative;
+  animation: fadeDown 0.9s ease 0.1s both;
+}
+
+.hero-title span {
+  font-style: italic;
+  color: #f1c40f;
+}
+
+.hero-subtitle {
+  font-family: 'Lora', serif;
+  color: rgba(255,255,255,0.65);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  text-align: center;
+  max-width: 600px;
+  margin-top: 18px;
+  line-height: 1.7;
+  position: relative;
+  animation: fadeDown 1s ease 0.2s both;
+}
+
+.poster-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 56px;
+  max-width: 900px;
+  width: 100%;
+  position: relative;
+  animation: fadeUp 1s ease 0.4s both;
+}
+
+.poster-card-mini {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 24px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.poster-card-mini:hover {
+  background: rgba(255,255,255,0.12);
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,0.25);
+}
+
+.pcm-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.pcm-num {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 6px;
+}
+
+.pcm-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.85rem;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.3);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  animation: bounce 2s ease infinite;
+}
+
+.scroll-hint::after {
+  content: '↓';
+  font-size: 1.1rem;
+}
+
+/* ========== NAV ========== */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(28,28,28,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  padding: 0 20px;
+}
+
+.nav-btn {
+  padding: 16px 22px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-btn:hover { color: #fff; }
+.nav-btn.p1:hover, .nav-btn.p1.active { border-color: var(--p1-primary); color: #fff; }
+.nav-btn.p2:hover, .nav-btn.p2.active { border-color: var(--p2-accent); color: #fff; }
+.nav-btn.p3:hover, .nav-btn.p3.active { border-color: var(--p3-primary); color: #fff; }
+.nav-btn.p4:hover, .nav-btn.p4.active { border-color: var(--p4-accent); color: #fff; }
+.nav-btn.refs:hover, .nav-btn.refs.active { border-color: rgba(255,255,255,0.5); color: #fff; }
+
+/* ========== POSTER SECTIONS ========== */
+.poster-section {
+  padding: 80px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.poster-section.p1 { background: var(--warm-white); }
+.poster-section.p2 { background: var(--cream); }
+.poster-section.p3 { background: var(--warm-white); }
+.poster-section.p4 { background: var(--cream); }
+
+.section-inner { max-width: 1100px; margin: 0 auto; }
+
+/* ---- Section Header ---- */
+.section-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 32px;
+  align-items: start;
+  margin-bottom: 60px;
+}
+
+.section-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 7rem;
+  font-weight: 900;
+  line-height: 0.85;
+  opacity: 0.08;
+  user-select: none;
+}
+
+.p1 .section-number { color: var(--p1-primary); }
+.p2 .section-number { color: var(--p2-primary); }
+.p3 .section-number { color: var(--p3-primary); }
+.p4 .section-number { color: var(--p4-primary); }
+
+.section-title-block { padding-top: 8px; }
+
+.poster-label {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.p1 .poster-label { background: var(--p1-light); color: var(--p1-primary); }
+.p2 .poster-label { background: var(--p2-light); color: var(--p2-primary); }
+.p3 .poster-label { background: var(--p3-light); color: var(--p3-primary); }
+.p4 .poster-label { background: var(--p4-light); color: var(--p4-primary); }
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--charcoal);
+  margin-bottom: 6px;
+}
+
+.section-title em { font-style: italic; }
+
+.p1 .section-title em { color: var(--p1-primary); }
+.p2 .section-title em { color: var(--p2-primary); }
+.p3 .section-title em { color: var(--p3-primary); }
+.p4 .section-title em { color: var(--p4-primary); }
+
+.section-byline {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  color: rgba(28,28,28,0.45);
+  font-size: 0.9rem;
+}
+
+/* ---- Definition Block ---- */
+.definition-block {
+  border-radius: 20px;
+  padding: 36px 40px;
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.p1 .definition-block { background: var(--p1-secondary); }
+.p2 .definition-block { background: var(--p2-secondary); }
+.p3 .definition-block { background: var(--p3-secondary); }
+.p4 .definition-block { background: var(--p4-secondary); }
+
+.definition-block::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 32px;
+  font-family: 'Playfair Display', serif;
+  font-size: 8rem;
+  line-height: 1;
+  opacity: 0.12;
+  color: #fff;
+}
+
+.def-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 12px;
+}
+
+.def-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.def-text {
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.85;
+}
+
+.def-citation {
+  margin-top: 16px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.38);
+  font-style: italic;
+}
+
+/* ---- Two Column Layout ---- */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 48px;
+  align-items: start;
+}
+
+.three-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+/* ---- Content Cards ---- */
+.content-card {
+  border-radius: 16px;
+  padding: 28px;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: #fff;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+}
+
+.card-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.p1 .card-icon { background: var(--p1-light); }
+.p2 .card-icon { background: var(--p2-light); }
+.p3 .card-icon { background: var(--p3-light); }
+.p4 .card-icon { background: var(--p4-light); }
+
+.card-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  color: rgba(28,28,28,0.72);
+  line-height: 1.75;
+}
+
+.card-text ul { list-style: none; padding: 0; }
+
+.card-text ul li {
+  padding: 5px 0 5px 20px;
+  position: relative;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.card-text ul li:last-child { border-bottom: none; }
+
+.card-text ul li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
+.p1 .card-text ul li::before { color: var(--p1-primary); }
+.p2 .card-text ul li::before { color: var(--p2-primary); }
+.p3 .card-text ul li::before { color: var(--p3-primary); }
+.p4 .card-text ul li::before { color: var(--p4-primary); }
+
+/* ---- Image with Caption ---- */
+.img-block {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.img-block img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.img-caption {
+  background: rgba(0,0,0,0.72);
+  color: rgba(255,255,255,0.7);
+  font-size: 0.7rem;
+  padding: 8px 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-style: italic;
+}
+
+/* ---- Role Responsibilities ---- */
+.role-section { margin-bottom: 48px; }
+
+.role-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid;
+}
+
+.p1 .role-title { border-color: var(--p1-primary); }
+.p2 .role-title { border-color: var(--p2-primary); }
+.p3 .role-title { border-color: var(--p3-primary); }
+.p4 .role-title { border-color: var(--p4-primary); }
+
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.role-item {
+  padding: 20px 22px;
+  border-radius: 12px;
+  border-left: 4px solid;
+  background: #fff;
+  box-shadow: 0 1px 12px rgba(0,0,0,0.04);
+}
+
+.p1 .role-item { border-color: var(--p1-primary); }
+.p2 .role-item { border-color: var(--p2-primary); }
+.p3 .role-item { border-color: var(--p3-primary); }
+.p4 .role-item { border-color: var(--p4-primary); }
+
+.role-item-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.role-item-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.83rem;
+  color: rgba(28,28,28,0.68);
+  line-height: 1.7;
+}
+
+.cite-small {
+  font-style: italic;
+  font-size: 0.75em;
+  opacity: 0.6;
+}
+
+/* ---- Learning Experiences ---- */
+.experiences-section { margin-bottom: 40px; }
+
+.exp-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+
+.exp-subtitle {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  color: rgba(28,28,28,0.48);
+  font-size: 0.88rem;
+  margin-bottom: 28px;
+}
+
+.age-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+.age-card-header {
+  padding: 20px 24px 16px;
+  position: relative;
+}
+
+.p1 .age-card-header { background: var(--p1-primary); }
+.p2 .age-card-header { background: var(--p2-primary); }
+.p3 .age-card-header { background: var(--p3-primary); }
+.p4 .age-card-header { background: var(--p4-primary); }
+
+.age-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.9);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.age-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.age-card-subtitle {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.65);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.age-card-body { padding: 22px 24px; }
+
+.age-field { margin-bottom: 14px; }
+.age-field:last-child { margin-bottom: 0; }
+
+.age-field-label {
+  font-size: 0.63rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.p1 .age-field-label { color: var(--p1-primary); }
+.p2 .age-field-label { color: var(--p2-primary); }
+.p3 .age-field-label { color: var(--p3-primary); }
+.p4 .age-field-label { color: var(--p4-primary); }
+
+.age-field-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.83rem;
+  color: rgba(28,28,28,0.72);
+  line-height: 1.65;
+}
+
+.age-field-text strong {
+  color: var(--charcoal);
+  font-weight: 600;
+}
+
+/* ---- Full-width image banner ---- */
+.img-banner {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.img-banner-caption {
+  font-size: 0.72rem;
+  color: rgba(28,28,28,0.42);
+  font-style: italic;
+  font-family: 'DM Sans', sans-serif;
+  text-align: right;
+  margin-bottom: 40px;
+}
+
+/* ---- Divider ---- */
+.poster-divider {
+  height: 6px;
+  margin: 0;
+  border: none;
+}
+
+.p1-div { background: linear-gradient(90deg, var(--p1-primary), var(--p1-accent), var(--p1-secondary)); }
+.p2-div { background: linear-gradient(90deg, var(--p2-primary), var(--p2-accent), var(--p2-secondary)); }
+.p3-div { background: linear-gradient(90deg, var(--p3-primary), var(--p3-accent), var(--p3-secondary)); }
+.p4-div { background: linear-gradient(90deg, var(--p4-primary), var(--p4-accent), var(--p4-secondary)); }
+
+/* ---- References Section ---- */
+.references-section {
+  background: #1c1c1c;
+  padding: 80px 40px;
+  color: rgba(255,255,255,0.85);
+}
+
+.ref-inner { max-width: 900px; margin: 0 auto; }
+
+.ref-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.ref-subheading {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.88rem;
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.ref-list { list-style: none; padding: 0; }
+
+.ref-list li {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.7);
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  padding-left: 2.5em;
+  text-indent: -2.5em;
+}
+
+.ref-list li:last-child { border-bottom: none; }
+
+.ref-section-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  margin: 30px 0 12px;
+  display: block;
+}
+
+/* ---- Image Attributions ---- */
+.img-attrib-section {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.img-attrib-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.img-attrib-list { list-style: none; padding: 0; }
+
+.img-attrib-list li {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ---- Footer ---- */
+.footer {
+  background: #111;
+  padding: 30px 40px;
+  text-align: center;
+}
+
+.footer-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.25);
+}
+
+/* ---- Animations ---- */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .poster-grid { grid-template-columns: repeat(2, 1fr); }
+  .two-col, .three-col, .role-grid { grid-template-columns: 1fr; }
+  .section-header { grid-template-columns: 1fr; }
+  .section-number { font-size: 4rem; display: none; }
+  .sticky-nav { overflow-x: auto; justify-content: flex-start; }
+  .poster-section { padding: 60px 20px; }
+  .references-section { padding: 60px 20px; }
+}
+
+@media (max-width: 600px) {
+  .poster-grid { grid-template-columns: repeat(2, 1fr); }
+  .age-card { margin-bottom: 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero-badge">Digital Poster Series · EPRO105 Assessment 3</div>
+  <h1 class="hero-title">The Early Childhood Teacher's Role in <span>Health, Safety, Nutrition &amp; Wellbeing</span></h1>
+  <p class="hero-subtitle">A cohesive, evidence-based resource for early childhood educators, teachers, and families — grounded in Australian policy, research, and intentional pedagogical practice.</p>
+
+  <div class="poster-grid">
+    <a href="#poster1" class="poster-card-mini">
+      <span class="pcm-icon">🛡️</span>
+      <div class="pcm-num">Poster 01</div>
+      <div class="pcm-title">Keeping Children Safe</div>
+    </a>
+    <a href="#poster2" class="poster-card-mini">
+      <span class="pcm-icon">💚</span>
+      <div class="pcm-num">Poster 02</div>
+      <div class="pcm-title">Promoting Children's Health</div>
+    </a>
+    <a href="#poster3" class="poster-card-mini">
+      <span class="pcm-icon">🥦</span>
+      <div class="pcm-num">Poster 03</div>
+      <div class="pcm-title">Supporting Nutrition</div>
+    </a>
+    <a href="#poster4" class="poster-card-mini">
+      <span class="pcm-icon">🌸</span>
+      <div class="pcm-num">Poster 04</div>
+      <div class="pcm-title">Facilitating Wellbeing</div>
+    </a>
+  </div>
+
+  <div class="scroll-hint">Scroll to explore</div>
+</section>
+
+<!-- ========== NAVIGATION ========== -->
+<nav class="sticky-nav">
+  <a href="#poster1" class="nav-btn p1">01 · Safety</a>
+  <a href="#poster2" class="nav-btn p2">02 · Health</a>
+  <a href="#poster3" class="nav-btn p3">03 · Nutrition</a>
+  <a href="#poster4" class="nav-btn p4">04 · Wellbeing</a>
+  <a href="#references" class="nav-btn refs">References</a>
+</nav>
+
+<!-- ===================================================== -->
+<!-- POSTER 1 — SAFETY -->
+<!-- ===================================================== -->
+<hr class="poster-divider p1-div">
+<section class="poster-section p1" id="poster1">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <div class="section-number">01</div>
+      <div class="section-title-block">
+        <div class="poster-label">Poster One</div>
+        <h2 class="section-title">The Early Childhood Teacher's Role in<br><em>Keeping Children Safe</em></h2>
+        <p class="section-byline">Creating physically and emotionally safe environments where every child can thrive</p>
+      </div>
+    </div>
+
+    <!-- Definition -->
+    <div class="definition-block fade-in">
+      <div class="def-label">What is Children's Safety in Early Childhood Services?</div>
+      <div class="def-heading">Defining Safety in Early Childhood Education and Care</div>
+      <p class="def-text">
+        The safety of children in early childhood education and care (ECEC) environments requires protection through three essential protective measures which defend all children who use the service. The process requires two key components which include first establishing protective measures and second creating safe spaces which enable children to develop their self-confidence through social interactions and educational activities (Australian Children's Education &amp; Care Quality Authority [ACECQA], 2023). The childcare center establishes two primary safety protocols which safeguard children against all types of abuse together with their emergency response training for fire incidents and lockdown situations and medical crises and their enforcement of detailed first aid protocols (ACECQA, 2023). The Education and Care Services National Law Act 2010 together with the National Quality Standard (NQS) and the Belonging, Being and Becoming: Early Years Learning Framework for Australia V2.0 (Australian Government Department of Education [AGDE], 2022) function as legal frameworks that empower early childhood teachers to develop and maintain protected spaces for their students.
+      </p>
+      <p class="def-citation">ACECQA (2023); AGDE (2022)</p>
+    </div>
+
+    <!-- Image -->
+    <img class="img-banner fade-in"
+         src="https://images.unsplash.com/photo-1551966775-a4ddc8df052b?w=1200&q=80&auto=format&fit=crop"
+         alt="Children engaged in supervised safe play in an early childhood setting">
+    <p class="img-banner-caption">Photo: Annie Spratt / Unsplash — Used under Unsplash licence (free to use)</p>
+
+    <!-- Teacher's Role -->
+    <div class="role-section fade-in">
+      <h3 class="role-title">The Early Childhood Teacher's Responsibility in Safety</h3>
+      <div class="role-grid">
+        <div class="role-item">
+          <div class="role-item-title">🚨 Emergency &amp; Evacuation Procedures</div>
+          <p class="role-item-text">The duty of early childhood teachers requires them to create emergency evacuation plans which they must regularly practice and update according to the requirements of the Education and Care Services National Regulations 2011 (Regulation 97). The organization must conduct three evacuation drills throughout every year. The organization should keep its existing risk evaluations at their present status. The organization must ensure that every employee understands their duties during emergencies. The organization needs to develop emergency procedures which families can easily comprehend. Teachers need to teach students how to respond to alarms and exit safely from the building based on their current developmental skills <span class="cite-small">(ACECQA, 2023; Safe Work Australia, 2022)</span>.</p>
+        </div>
+        <div class="role-item">
+          <div class="role-item-title">🩺 First Aid &amp; Incident Response</div>
+          <p class="role-item-text">Teachers must hold and maintain current first aid qualifications (including anaphylaxis and asthma management) and keep at least one qualified first aider available throughout the entire time (Regulation 136). The organization must report incidents which include completing records for incidents and injuries and traumas and illnesses within 24 hours after serious incidents and must inform families and regulatory authorities without delay. Teachers model emergency situations by showing calm behavior which uses evidence based practices while they comfort children and execute quick actions to protect people from danger <span class="cite-small">(ACECQA, 2023)</span>.</p>
+        </div>
+        <div class="role-item">
+          <div class="role-item-title">📋 Conducting Risk Assessments</div>
+          <p class="role-item-text">Early childhood teachers need to perform ongoing risk assessments throughout all spaces which include indoor and outdoor areas and excursion sites according to NQS Quality Area 2. The process requires more than risk elimination because it needs to establish "reasonable precaution" protocols which enable children to participate in dangerous yet beneficial play activities while safety measures will protect them from known threats. Teachers create risk assessment documents which they need to review at regular intervals while teaching students to identify safety risks and develop methods to handle those risks <span class="cite-small">(ACECQA, 2023; Canning, 2020)</span>.</p>
+        </div>
+        <div class="role-item">
+          <div class="role-item-title">🔄 Leading Safe Routines, Transitions &amp; Play</div>
+          <p class="role-item-text">Intentional planning of transitions and daily routines is essential for maintaining child safety throughout the entire day. Teachers maintain proper adult-to-child ratios during times of increased risk which occur during student arrival times and student departure times and mealtimes and outdoor playtime. The educators create stable and steady routines which students will learn to follow through repeated practice because this approach helps them manage their anxiety while developing self-control skills. The safe play areas receive both necessary resources and ongoing maintenance to support children's independence while teaching them how to understand their safe boundaries <span class="cite-small">(AGDE, 2022; Nutton &amp; Fraser, 2021)</span>.</p>
+        </div>
+        <div class="role-item">
+          <div class="role-item-title">🛡️ Child Protection Responsibilities</div>
+          <p class="role-item-text">Australian states and territories have established child protection laws which require early childhood educators to report any suspected child abuse cases they encounter. The requirements state that teachers must identify signs of abuse and neglect and domestic violence which manifest through physical and behavioral and emotional signs. Teachers need to inform child protection authorities whenever they have reasonable grounds to believe that abuse has occurred. The staff members need to document their concerns by using specific details which describe the actual situation. According to Cross and Ragusa 2021 and ACECQA 2023 organizations must implement a documented Child Safe Environment policy to protect children from harm <span class="cite-small">(Cross &amp; Ragusa, 2021; ACECQA, 2023)</span>.</p>
+        </div>
+        <div class="role-item">
+          <div class="role-item-title">📚 Educating Children to Stay Safe</div>
+          <p class="role-item-text">Teachers play a proactive pedagogical role in teaching children age-appropriate safety concepts. The teachers use child-centred inquiry-based methods to teach safety education throughout all subjects. The educational program includes personal body safety (body autonomy and safe versus unsafe touch) and road and pedestrian safety and fire safety awareness and water safety and safe social interactions. The educational material uses children's actual life experiences and adjusts to their current stage of development <span class="cite-small">(AGDE, 2022; Cross &amp; Ragusa, 2021)</span>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Learning Experiences -->
+    <div class="experiences-section fade-in">
+      <h3 class="exp-title">Learning Experiences Across Age Groups</h3>
+      <p class="exp-subtitle">One intentional, evidence-based safety learning experience per developmental age group</p>
+      <div class="three-col">
+
+        <!-- 0-2 -->
+        <div class="age-card">
+          <div class="age-card-header">
+            <div class="age-badge">0–2 Years</div>
+            <div class="age-card-title">"My Body Belongs to Me"</div>
+            <div class="age-card-subtitle">Body Autonomy &amp; Safe Touch</div>
+          </div>
+          <div class="age-card-body">
+            <div class="age-field">
+              <div class="age-field-label">Learning Intention</div>
+              <div class="age-field-text">To develop infants' earliest awareness of bodily autonomy and responsive, respectful touch through secure caregiver interaction.</div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Experience Description</div>
+              <div class="age-field-text">The teacher uses basic vocabulary to explain all activities which he conducts during nappy changes and personal care routines. The teacher observes and responds to the infant's verbal and non-verbal cues (turning away, tensing, smiling), pausing when the infant signals discomfort. The teacher begins to sing gentle songs which name body parts from "Head, Shoulders, Knees and Toes" while he first demonstrates body parts through pointing and naming them on his own body.</div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Key Learning Areas</div>
+              <div class="age-field-text">Body awareness · Consent foundations · Responsive relationships · EYLF Outcome 3 (Wellbeing) <span class="cite-small">(AGDE, 2022)</span></div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Pedagogical Approach</div>
+              <div class="age-field-text">Secure attachment, responsive caregiving, embodied learning through primary care routines <span class="cite-small">(Cross &amp; Ragusa, 2021)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2-3 -->
+        <div class="age-card">
+          <div class="age-card-header">
+            <div class="age-badge">2–3 Years</div>
+            <div class="age-card-title">"Stop, Look &amp; Listen"</div>
+            <div class="age-card-subtitle">Safe Movement &amp; Environmental Awareness</div>
+          </div>
+          <div class="age-card-body">
+            <div class="age-field">
+              <div class="age-field-label">Learning Intention</div>
+              <div class="age-field-text">To build children's capacity to identify and respond to environmental safety signals and practise safe body management in shared spaces.</div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Experience Description</div>
+              <div class="age-field-text">The teacher uses an outdoor area for the modified movement game to establish "safe spots" through coloured hoops and a mock "road" which he creates with rope. The children learn to cross the street by following the <strong>Stop, Look, Listen</strong> steps. The teacher demonstrates the crossing process by using think-alouds which include his statement <em>"I stop my feet, I look both ways with my eyes, I listen for sounds, and only then do I cross safely."</em> Students practice stop-and-check behavior during the school day because transition cues signal them to do so through a bell and a pause and a visual signal.</div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Key Learning Areas</div>
+              <div class="age-field-text">Environmental safety · Self-regulation · Physical literacy · EYLF Outcomes 1, 3 <span class="cite-small">(AGDE, 2022)</span></div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Pedagogical Approach</div>
+              <div class="age-field-text">Play-based learning, scaffolded teacher modelling, and repetitive routine embedding <span class="cite-small">(Canning, 2020)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3-5 -->
+        <div class="age-card">
+          <div class="age-card-header">
+            <div class="age-badge">3–5 Years</div>
+            <div class="age-card-title">"Emergency Helpers"</div>
+            <div class="age-card-subtitle">Emergency Awareness &amp; Community Safety</div>
+          </div>
+          <div class="age-card-body">
+            <div class="age-field">
+              <div class="age-field-label">Learning Intention</div>
+              <div class="age-field-text">To build children's confidence in recognising emergency situations and understanding how to seek help from trusted adults and emergency services.</div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Experience Description</div>
+              <div class="age-field-text">Children use an "emergency centre" which includes a telephone and high-visibility vests and simple props to perform their dramatic play activities. The teacher uses role-play scenarios to help students learn through the following scenario: <em>"What would we do if there was a fire?"</em> Children learn about <strong>Triple Zero (000)</strong> through a non-functional prop phone which teachers use to demonstrate how to speak in a calm and clear manner. The students practice this reading through shared reading of <em>When I Feel Scared</em> and their safety anchor charts which they created in class.</div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Key Learning Areas</div>
+              <div class="age-field-text">Emergency awareness · Community helpers · Civic literacy · EYLF Outcomes 1, 2, 3 <span class="cite-small">(AGDE, 2022)</span></div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Pedagogical Approach</div>
+              <div class="age-field-text">Socio-dramatic play, intentional teaching, critical inquiry, and collaborative learning <span class="cite-small">(Cross &amp; Ragusa, 2021; AGDE, 2022)</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- POSTER 2 — HEALTH -->
+<!-- ===================================================== -->
+<hr class="poster-divider p2-div">
+<section class="poster-section p2" id="poster2">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <div class="section-number">02</div>
+      <div class="section-title-block">
+        <div class="poster-label">Poster Two</div>
+        <h2 class="section-title">The Early Childhood Teacher's Role in<br><em>Promoting Children's Health</em></h2>
+        <p class="section-byline">Building healthy bodies, habits, and environments from the earliest years</p>
+      </div>
+    </div>
+
+    <!-- Definition -->
+    <div class="definition-block fade-in">
+      <div class="def-label">What is Children's Health in Early Childhood Services?</div>
+      <div class="def-heading">Defining Health in Early Childhood Education and Care</div>
+      <p class="def-text">
+        The ECEC settings use a holistic strengths-based assessment method that assesses children's health through their physical health framework which includes illness prevention and immunisation and hygiene and medical management and their mental and social and emotional health. The NQS Quality Area 2 requires that services implement effective health protection policies which create secure environments and employ trained staff members who know how to protect children's health and safety. Children who establish strong social connections and reside in secure spaces during their formative years achieve improved health outcomes because these experiences create benefits that last throughout their entire lives. Early childhood teachers therefore occupy a central role not merely in responding to illness but in proactively building health literacy and establishing protective practices as daily habits. The process involves creating hygiene standards which enable people to maintain their health and establishing illness management protocols and delivering medications to patients and building collaborative relationships with families and health professionals to support each child's distinct health requirements.
+      </p>
+      <p class="def-citation">ACECQA (2023); Goldfeld et al. (2022); WHO (2021)</p>
+    </div>
+
+    <!-- Image -->
+    <img class="img-banner fade-in"
+         src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=1200&q=80&auto=format&fit=crop"
+         alt="Child washing hands with a teacher demonstrating proper handwashing technique">
+    <p class="img-banner-caption">Photo: Curated Lifestyle / Unsplash — Used under Unsplash licence (free to use)</p>
+
+    <!-- Teacher's Role -->
+    <div class="role-section fade-in">
+      <h3 class="role-title">The Early Childhood Teacher's Responsibility in Health</h3>
+      <div class="role-grid">
+        <div class="role-item">
+          <div class="role-item-title">🧼 Hygiene Practices &amp; Daily Routines</div>
+          <p class="role-item-text">The teachers implement and demonstrate established hygiene practices which protect against infectious diseases through their handwashing procedures that follow toilet use and meal times and outdoor playtimes and their procedures for covering mouth and nose during coughs and sneezes and their methods of keeping surfaces and resources disinfected. The daily schedule includes these routines which help children develop healthy habits through direct teaching of the reasons behind each practice <span class="cite-small">(NSW Health, 2022; ACECQA, 2023)</span>.</p>
+        </div>
+        <div class="role-item">
+          <div class="role-item-title">👨‍👩‍👧 Communicating with Families &amp; Responding to Health Needs</div>
+          <p class="role-item-text">Teachers establish open communication channels with families which show respect for different cultures while they discuss their child's medical requirements. Teachers need to establish communication paths which will assist families in understanding their medical requirements. The school maintains family contact through regular updates which establish a partnership needed to effectively manage student health conditions <span class="cite-small">(Goldfeld et al., 2022; ACECQA, 2023)</span>.</p>
+        </div>
+        <div class="role-item">
+          <div class="role-item-title">🌡️ Managing Illness, Allergies &amp; Medical Conditions</div>
+          <p class="role-item-text">Early childhood teachers who develop medical management plans for students with anaphylaxis need to execute their plans because they need ASCIA Action Plans and adrenaline autoinjectors and asthma patients require their written Asthma Action Plans and students with diabetes and epilepsy need the same treatment. The organization must apply the illness exclusion guidelines which are established in <em>Staying Healthy</em> 6th edition throughout its operational activities. Teachers must have written parental consent before they can administer prescribed medications because they must deny all over-the-counter medication requests until they obtain suitable documentation. The teachers must maintain student health information confidentiality <span class="cite-small">(NSW Health, 2022; ACECQA, 2023)</span>.</p>
+        </div>
+        <div class="role-item">
+          <div class="role-item-title">🏥 Creating Environments that Prevent Illness Transmission</div>
+          <p class="role-item-text">The physical spaces created by teachers through their design work to reduce infection transmission risks. The necessary requirements include proper airflow systems and continuous cleaning and disinfecting processes for commonly touched areas and shared facilities and proper waste handling systems for contaminated items and the planned arrangement of areas which prevents excessive crowding. The arrival screening process for illnesses occurs in a careful manner while sick children receive treatment in a designated area until their parents or guardians arrive for pickup. The enrollment procedure includes documentation of vaccination records which staff members verify <span class="cite-small">(NSW Health, 2022; ACECQA, 2023)</span>.</p>
+        </div>
+        <div class="role-item">
+          <div class="role-item-title">💉 Immunisation &amp; Health Screening</div>
+          <p class="role-item-text">The Australian Government requires early childhood programs to maintain current immunization records because of the No Jab No Pay and No Jab No Play laws. Teachers assist this process by providing families with immunization schedule information and linking health concerns to appropriate medical professionals while giving families access to immunization information. The implementation of health development screening which includes hearing tests vision tests and developmental assessments receives assistance through collaborations between pediatric services and child and family health nurses <span class="cite-small">(ACECQA, 2023; Australian Government Department of Health and Aged Care [AGDHAC], 2022)</span>.</p>
+        </div>
+        <div class="role-item">
+          <div class="role-item-title">📖 Embedding Health Education Across the Curriculum</div>
+          <p class="role-item-text">The Australian Government requires early childhood programs to maintain current immunization records because of the No Jab No Pay and No Jab No Play laws. Teachers assist this process by providing families with immunization schedule information and linking health concerns to appropriate medical professionals while giving families access to immunization information. The implementation of health development screening which includes hearing tests vision tests and developmental assessments receives assistance through collaborations between pediatric services and child and family health nurses <span class="cite-small">(ACECQA, 2023; Australian Government Department of Health and Aged Care [AGDHAC], 2022)</span>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Learning Experiences -->
+    <div class="experiences-section fade-in">
+      <h3 class="exp-title">Learning Experiences Across Age Groups</h3>
+      <p class="exp-subtitle">One intentional, evidence-based health learning experience per developmental age group</p>
+      <div class="three-col">
+
+        <!-- 0-2 -->
+        <div class="age-card">
+          <div class="age-card-header">
+            <div class="age-badge">0–2 Years</div>
+            <div class="age-card-title">"Wash-a-Bye Hands"</div>
+            <div class="age-card-subtitle">Hygiene Through Sensory Routine</div>
+          </div>
+          <div class="age-card-body">
+            <div class="age-field">
+              <div class="age-field-label">Learning Intention</div>
+              <div class="age-field-text">To introduce infants and toddlers to the sensory and procedural experience of handwashing as a warm, predictable, and positive health routine.</div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Experience Description</div>
+              <div class="age-field-text">The teacher helps the student wash their hands using warm water and mild soap which the student needs for their meals and diaper changes. The process uses a brief repetitive song which includes the lyrics <strong>"Rub-a-dub-dub we wash our hands clean is good for you and me."</strong> The teacher explains each step with a calm voice while matching the child's facial expressions and maintaining eye contact to create a safe and personal experience with the child. The program helps infants develop their ability to splash water while they discover different sensory experiences through water play.</div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Key Learning Areas</div>
+              <div class="age-field-text">Hygiene foundations · Sensory exploration · Trusting relationships · EYLF Outcome 3 <span class="cite-small">(AGDE, 2022)</span></div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Pedagogical Approach</div>
+              <div class="age-field-text">Relational caregiving, embodied learning, and routine-based health promotion <span class="cite-small">(NSW Health, 2022)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2-3 -->
+        <div class="age-card">
+          <div class="age-card-header">
+            <div class="age-badge">2–3 Years</div>
+            <div class="age-card-title">"Germ Busters!"</div>
+            <div class="age-card-subtitle">Visual Germ Awareness &amp; Handwashing</div>
+          </div>
+          <div class="age-card-body">
+            <div class="age-field">
+              <div class="age-field-label">Learning Intention</div>
+              <div class="age-field-text">To build toddlers' emerging understanding of germs and the power of handwashing using a memorable, visual, inquiry-based experience.</div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Experience Description</div>
+              <div class="age-field-text">The teacher sprinkles <strong>biodegradable glitter</strong> which she calls "pretend germs" onto children. The children attempt to wipe off the glitter using a tissue which shows them that multiple "germs" still exist on their hands. The students practice the five-step handwashing procedure which includes wetting their hands applying soap scrubbing their hands rinsing their hands and drying their hands while the teacher explains each part of the process. The children see how complete washing removes all the glitter from their bodies. The children use a basic chart which displays "before" and "after" results to check throughout the entire day.</div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Key Learning Areas</div>
+              <div class="age-field-text">Germ awareness · Handwashing procedure · Cause and effect · EYLF Outcomes 3, 4 <span class="cite-small">(AGDE, 2022)</span></div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Pedagogical Approach</div>
+              <div class="age-field-text">Inquiry-based learning, visual learning, scaffolded explanation <span class="cite-small">(NSW Health, 2022; Goldfeld et al., 2022)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3-5 -->
+        <div class="age-card">
+          <div class="age-card-header">
+            <div class="age-badge">3–5 Years</div>
+            <div class="age-card-title">"My Body Speaks to Me"</div>
+            <div class="age-card-subtitle">Recognising Bodily Cues &amp; Expressing Health Needs</div>
+          </div>
+          <div class="age-card-body">
+            <div class="age-field">
+              <div class="age-field-label">Learning Intention</div>
+              <div class="age-field-text">To develop children's capacity to notice internal bodily cues (hunger, thirst, tiredness, pain) and confidently communicate their health needs to trusted adults.</div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Experience Description</div>
+              <div class="age-field-text">The teacher uses a large body outline display on a whiteboard to lead a "body detective" investigation about hunger-related tummy sensations. Children use sticky dots to mark where they feel different sensations on the body outline. The class works together to create "body signal" cards which contain pictures and simple text that show when someone a head hurts they need to rest and when someone is thirsty they need to drink water. The role-plays teach children to ask for assistance by using the phrase <strong>"I need to tell a grown-up when..."</strong></div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Key Learning Areas</div>
+              <div class="age-field-text">Interoception · Health literacy · Agency · EYLF Outcomes 1, 3, 5 <span class="cite-small">(AGDE, 2022)</span></div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Pedagogical Approach</div>
+              <div class="age-field-text">Collaborative inquiry, reflective learning, critical thinking, and health advocacy skills <span class="cite-small">(Goldfeld et al., 2022; AGDE, 2022)</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- POSTER 3 — NUTRITION -->
+<!-- ===================================================== -->
+<hr class="poster-divider p3-div">
+<section class="poster-section p3" id="poster3">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <div class="section-number">03</div>
+      <div class="section-title-block">
+        <div class="poster-label">Poster Three</div>
+        <h2 class="section-title">The Early Childhood Teacher's Role in<br><em>Supporting Children's Nutrition</em></h2>
+        <p class="section-byline">Cultivating positive food relationships, healthy eating habits, and nutritional knowledge</p>
+      </div>
+    </div>
+
+    <!-- Definition -->
+    <div class="definition-block fade-in">
+      <div class="def-label">What is Children's Nutrition in Early Childhood Services?</div>
+      <div class="def-heading">Defining Nutrition in Early Childhood Education and Care</div>
+      <p class="def-text">
+        The ECEC context requires more than children eating their meals because it requires children to develop relationships with food and understand its cultural significance and learn nutritional information and experience the dining space which educators set up (Nutton &amp; Fraser, 2021). The Australian Dietary Guidelines (National Health and Medical Research Council [NHMRC], 2013, updated AGDHAC, 2022) establish the basic framework which shows that young children need to eat meals containing nutrient-dense foods which include vegetables and fruits and whole grains and lean proteins and dairy products to achieve optimal development results. The NQS Quality Area 2.1.3 requires that mealtimes serve as educational activities which trained educators lead through their expertise. ECEC settings are uniquely placed to shape children's earliest food attitudes because their early years habits create health patterns which continue throughout their entire life (Nutton &amp; Fraser, 2021; NHMRC/AGDHAC, 2022). Teachers therefore hold dual roles because they work as both nutritional facilitators and educators at the same time when they practice healthy methods while presenting food science information to students which they have learned through scientific research.
+      </p>
+      <p class="def-citation">NHMRC/AGDHAC (2022); Nutton &amp; Fraser (2021); ACECQA (2023)</p>
+    </div>
+
+    <!-- Image -->
+    <img class="img-banner fade-in"
+         src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=1200&q=80&auto=format&fit=crop"
+         alt="Colourful array of fresh fruits and vegetables representing healthy nutrition for young children">
+    <p class="img-banner-caption">Photo: Brooke Lark / Unsplash — Used under Unsplash licence (free to use)</p>
+
+    <!-- Teacher's Role -->
+    <div class="role-section fade-in">
+      <h3 class="role-title">The Early Childhood Teacher's Responsibility in Nutrition</h3>
+      <div class="role-grid">
+        <div class="role-item">
+          <div class="role-item-title">🍽️ Educating Through Mealtimes &amp; Intentional Conversations</div>
+          <p class="role-item-text">The process of learning vital knowledge during mealtime. During meal times, teachers eat with students while they have genuine talks about food which includes its origin sources and its various colors and textures and tastes and nutritional contents. The teachers use open-ended questions to evaluate student understanding of food crunchiness while they teach students food and nutrition vocabulary and they allow students to select their own meals. The teachers establish a dining area which enables various cultural groups to engage in discussions while they serve nutritious food options <span class="cite-small">(Nutton &amp; Fraser, 2021; ACECQA, 2023)</span>.</p>
+        </div>
+        <div class="role-item">
+          <div class="role-item-title">🥦 Modelling Healthy Eating Behaviours</div>
+          <p class="role-item-text">Children can see and comprehend every action that adults perform. The teachers who eat healthy meals with their students while showing real happiness about nutritious food display their positive relationship with food, which sends strong hidden messages to their students. The teachers at the school show their enthusiasm for new foods by avoiding negative comments about dishes that they find unappealing and their food preferences. The teachers choose which foods to serve and create the dining space while the students decide their eating habits according to the Ellyn Satter model of responsibility division <span class="cite-small">(Nutton &amp; Fraser, 2021; AGDHAC, 2022)</span>.</p>
+        </div>
+        <div class="role-item">
+          <div class="role-item-title">📚 Embedding Nutrition Concepts in the Curriculum</div>
+          <p class="role-item-text">The ECEC curriculum implements nutrition education throughout its curriculum framework which extends beyond meal service times. Teachers use food-sorting activities and classification exercises and "food from around the world" explorations and garden programs and cooking experiences and art activities which use food as a medium to create their learning provocations. The EYLF framework establishes nutritional education as a pathway that connects to three EYLF outcomes because teachers use pedagogical documentation to record and develop children's understanding of food-related concepts <span class="cite-small">(AGDE, 2022; Nutton &amp; Fraser, 2021)</span>.</p>
+        </div>
+        <div class="role-item">
+          <div class="role-item-title">⚠️ Supporting Allergies, Intolerances &amp; Cultural Dietary Needs</div>
+          <p class="role-item-text">Teachers maintain records of Allergy and Anaphylaxis Action Plans while they educate all staff members about the specific dietary requirements of each student. The guidelines require food to be stored and labelled according to established procedures. The organization honors all cultural and religious dietary needs including halal and vegetarian and kosher and cultural food preferences because these needs represent essential dignity and partnership with families. The menu design process involves multiple stakeholders who work together to create options that meet all children's needs. The practice principle establishes dietary differences as an essential area which requires protection from stigmatisation <span class="cite-small">(ACECQA, 2023; NSW Health, 2022)</span>.</p>
+        </div>
+        <div class="role-item">
+          <div class="role-item-title">🌱 Positive Food Environments</div>
+          <p class="role-item-text">Mealtime physical conditions together with social settings for food learning activities create a strong effect on children's ability to maintain proper nutrition. The teachers maintain table settings to look appealing while they present food in an attractive manner and create a peaceful social dining environment. Children learn to prepare their own meals through activities that include spreading and pouring and cutting with safe utensils and self-service. The feeding methods protect the developing relationship between children and their experience of hunger and satiety and enjoyment of food because they involve no food force feeding and no food bribes and no food restrictions <span class="cite-small">(Nutton &amp; Fraser, 2021; AGDHAC, 2022)</span>.</p>
+        </div>
+        <div class="role-item">
+          <div class="role-item-title">📋 Menu Planning &amp; Dietary Guidelines</div>
+          <p class="role-item-text">Early childhood teachers work with cooks and service leaders to create menus which meet the Australian Dietary Guidelines and the Get Up &amp; Grow: Healthy Eating and Physical Activity for Early Childhood resource (AGDHAC, 2022). The service day menus provide sufficient macro and micronutrients which match the required serve sizes for each age group. Water is available for free at all times. The organization conducts regular reviews of menu nutritional adequacy which they adjust according to the developmental requirements of children <span class="cite-small">(AGDHAC, 2022; ACECQA, 2023)</span>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Learning Experiences -->
+    <div class="experiences-section fade-in">
+      <h3 class="exp-title">Learning Experiences Across Age Groups</h3>
+      <p class="exp-subtitle">One intentional, evidence-based nutrition learning experience per developmental age group</p>
+      <div class="three-col">
+
+        <!-- 0-2 -->
+        <div class="age-card">
+          <div class="age-card-header">
+            <div class="age-badge">0–2 Years</div>
+            <div class="age-card-title">"Taste &amp; Touch"</div>
+            <div class="age-card-subtitle">Sensory Food Exploration</div>
+          </div>
+          <div class="age-card-body">
+            <div class="age-field">
+              <div class="age-field-label">Learning Intention</div>
+              <div class="age-field-text">To build infants' sensory familiarity with diverse foods and textures, supporting the development of positive food associations and oral motor skills.</div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Experience Description</div>
+              <div class="age-field-text">The sensory food tray provides infants seated in their high chair or mat with supervision access to soft ripe banana and cooked sweet potato and avocado and pear. The children explore objects by using their sense of touch and sense of smell and ability to squeeze and taste everything they encounter without feeling any need to prove themselves. The teacher uses elaborate vocabulary to explain the situation by saying <em>"Look at this — it's orange! It's soft. It smells sweet. It came from the ground, growing in soil..."</em> The infant safe mirror which exists in the room enables babies to observe their own facial expressions that show either curiosity or happiness.</div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Key Learning Areas</div>
+              <div class="age-field-text">Sensory exploration · Oral development · Food familiarity · EYLF Outcomes 3, 4 <span class="cite-small">(AGDE, 2022)</span></div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Pedagogical Approach</div>
+              <div class="age-field-text">Sensory play, responsive feeding, infant-led exploration <span class="cite-small">(Nutton &amp; Fraser, 2021)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2-3 -->
+        <div class="age-card">
+          <div class="age-card-header">
+            <div class="age-badge">2–3 Years</div>
+            <div class="age-card-title">"Rainbow on My Plate"</div>
+            <div class="age-card-subtitle">Food Sorting, Colours &amp; Classification</div>
+          </div>
+          <div class="age-card-body">
+            <div class="age-field">
+              <div class="age-field-label">Learning Intention</div>
+              <div class="age-field-text">To build toddlers' knowledge of food diversity, colour, and basic nutritional concepts through hands-on sorting, naming, and tasting.</div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Experience Description</div>
+              <div class="age-field-text">The table displays a big rainbow sorting board which contains separate sections for every colour. The children receive a basket which contains cleaned fruits and vegetables that show all the main colours of the spectrum (red capsicum, orange carrot, yellow banana, green broccoli, blueberries, purple grape). The children use colour sorting methods with teacher guidance while they express their findings about different textures and scents. Each child creates a <strong>"rainbow plate"</strong> snack project, choosing one item from every colour group. The teacher narrates: <em>"Eating all the colours helps our bodies grow strong!"</em></div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Key Learning Areas</div>
+              <div class="age-field-text">Food classification · Colour recognition · Dietary variety · EYLF Outcomes 3, 4, 5 <span class="cite-small">(AGDE, 2022)</span></div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Pedagogical Approach</div>
+              <div class="age-field-text">Hands-on learning, classification, intentional teaching, and agency in food choices <span class="cite-small">(Nutton &amp; Fraser, 2021; AGDHAC, 2022)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3-5 -->
+        <div class="age-card">
+          <div class="age-card-header">
+            <div class="age-badge">3–5 Years</div>
+            <div class="age-card-title">"From Garden to Plate"</div>
+            <div class="age-card-subtitle">Growing, Harvesting &amp; Cooking Experience</div>
+          </div>
+          <div class="age-card-body">
+            <div class="age-field">
+              <div class="age-field-label">Learning Intention</div>
+              <div class="age-field-text">To develop children's understanding of food origins, sustainable food practices, and cooking skills through a connected garden-to-table project.</div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Experience Description</div>
+              <div class="age-field-text">The garden project requires children to take care of the <strong>herb and vegetable garden</strong> throughout its active development. The children will collect herbs and salad ingredients when the plants become ready for harvesting which they will use to create basic salad dishes and herb-butter bread through safe kitchen tools. The teacher uses photographs to record the entire procedure while children express their findings through spoken words to create a class "cookbook." Children can taste food at their own speed which enables them to describe flavors through their individual word choices.</div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Key Learning Areas</div>
+              <div class="age-field-text">Food origins · Sustainability · Cooking skills · Science &amp; maths · EYLF Outcomes 2, 3, 4, 5 <span class="cite-small">(AGDE, 2022)</span></div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Pedagogical Approach</div>
+              <div class="age-field-text">Project-based learning, sustainability education, and collaborative inquiry <span class="cite-small">(Nutton &amp; Fraser, 2021; AGDE, 2022)</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- POSTER 4 — WELLBEING -->
+<!-- ===================================================== -->
+<hr class="poster-divider p4-div">
+<section class="poster-section p4" id="poster4">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <div class="section-number">04</div>
+      <div class="section-title-block">
+        <div class="poster-label">Poster Four</div>
+        <h2 class="section-title">The Early Childhood Teacher's Role in<br><em>Facilitating Children's Wellbeing</em></h2>
+        <p class="section-byline">Nurturing resilience, belonging, and emotional flourishing in every child</p>
+      </div>
+    </div>
+
+    <!-- Definition -->
+    <div class="definition-block fade-in">
+      <div class="def-label">What's Children's Wellbeing in Early Childhood Services?</div>
+      <div class="def-heading">Defining Wellbeing in Early Childhood Education and Care</div>
+      <p class="def-text">
+        The complete state of Children's wellbeing consists of multiple dimensions which demonstrate the connection between their physical health and their mental health and their social health and their emotional health. The Australian ECEC policy uses EYLF V2.0 (AGDE, 2022) to define wellbeing as a fundamental principle that runs throughout its entire framework. The quality of relational environments determines early childhood wellbeing because children who build responsive and consistent and warm relationships with their educators experience better self-regulation and expanded emotional vocabulary and increased resilience (Mashford-Scott &amp; Church, 2022). Early childhood teachers function as architects who create wellbeing through their presence and their ability to understand students and their educational choices and their creation of learning spaces which allow every student to build real social relationships and experience joyful interactions with their environment.
+      </p>
+      <p class="def-citation">AGDE (2022); Mashford-Scott &amp; Church (2022); WHO (2021)</p>
+    </div>
+
+    <!-- Image -->
+    <img class="img-banner fade-in"
+         src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=1200&q=80&auto=format&fit=crop"
+         alt="Children playing together cooperatively outdoors in a natural environment">
+    <p class="img-banner-caption">Photo: Robert Collins / Unsplash — Used under Unsplash licence (free to use)</p>
+
+    <!-- Teacher's Role -->
+    <div class="role-section fade-in">
+      <h3 class="role-title">The Early Childhood Teacher's Responsibility in Wellbeing</h3>
+      <div class="role-grid">
+        <div class="role-item">
+          <div class="role-item-title">💛 Building Secure &amp; Responsive Relationships</div>
+          <p class="role-item-text">The attachment bonds between children and their teachers determine their overall health and welfare. Teachers establish trustworthy connections through their continuous presence and emotional availability which they show with their affectionate and responsive behavior. The approach requires teachers to address each student by their assigned name while establishing direct visual contact and physically positioning themselves at the same level as the student to manage their play activities while securely handling their emotional problems. The secure attachment between students and their teachers serves as a foundation which enables students to explore their surroundings with confidence <span class="cite-small">(Mashford-Scott &amp; Church, 2022; AGDE, 2022)</span>.</p>
+        </div>
+        <div class="role-item">
+          <div class="role-item-title">🧠 Supporting Emotional Regulation &amp; Resilience</div>
+          <p class="role-item-text">The period of early childhood serves as the essential time frame during which children start developing their emotional regulation skills that enable them to recognize their feelings and demonstrate their emotions while learning to control their emotional states. Through their calm verbal communication teachers establish predictable classroom environments which help students learn new self-control abilities through co-regulation activities. The definition of resilience involves building child recovery skills which develop through relationships built on trust rather than expecting them to handle challenges unaided. Teachers implement targeted methods which involve teaching students how to express their emotions and solve social problems and use positive language to describe their abilities <span class="cite-small">(Mashford-Scott &amp; Church, 2022; AGDE, 2022)</span>.</p>
+        </div>
+        <div class="role-item">
+          <div class="role-item-title">🤝 Promoting Social Skills &amp; Collaborative Play</div>
+          <p class="role-item-text">Social competence predicts long-term wellbeing and school readiness and mental health outcomes. Early childhood teachers help children develop prosocial skills through their intentional teaching practice which includes collaborative play activities and social script instruction and demonstration of pro-social behavior. Teachers study how students interact with each other and they make planned interventions to help students handle their own disputes while keeping everyone safe and developing safe play spaces that respect different ways people interact <span class="cite-small">(Mashford-Scott &amp; Church, 2022; AGDE, 2022)</span>.</p>
+        </div>
+        <div class="role-item">
+          <div class="role-item-title">🏡 Creating Environments that Support Belonging &amp; Inclusion</div>
+          <p class="role-item-text">The physical and relational environments of early childhood settings create strong messages which indicate who is permitted to enter. Teachers develop educational spaces which display the cultural identities and languages and abilities and family structures of their students. The system requires multiple visual family and community displays together with multilingual materials and special education resources and adaptable areas that support different sensory and social requirements. The concept of inclusion functions as an essential element of superior ECEC practices which operate according to UN Convention on the Rights of the Child (UNCRC) standards <span class="cite-small">(AGDE, 2022; Mashford-Scott &amp; Church, 2022)</span>.</p>
+        </div>
+        <div class="role-item">
+          <div class="role-item-title">🌿 Embedding Wellbeing Practices Across the Curriculum</div>
+          <p class="role-item-text">Wellbeing exists as an essential component which connects all elements of the early childhood curriculum. Teachers use mindfulness activities and physical exercise and nature play and music and creative arts and storytelling and group reflections to practice wellbeing. Pedagogical documentation shows how children demonstrate their well-being through different learning areas by showing their happiness and creative exploration and determination and social relationships and amazement. The organization reviews Wellbeing outcomes through its assessment process which combines self-evaluation with team-based professional development activities <span class="cite-small">(AGDE, 2022; Mashford-Scott &amp; Church, 2022)</span>.</p>
+        </div>
+        <div class="role-item">
+          <div class="role-item-title">🔄 Transitions, Routines &amp; Predictability</div>
+          <p class="role-item-text">Children build their emotional stability through reliable and consistent daily routines which provide them with a sense of security and control over their environment. Early childhood teachers create clear transition plans which they communicate to their students through visual schedules and transition songs and their special support for students who have high anxiety levels. The arrival and departure rituals receive special attention because they represent the emotional importance of separation and reunion moments. Teachers create smooth transitions between various learning spaces by supporting students to build their internal strength and personal identity while they advance through their academic experience <span class="cite-small">(AGDE, 2022; ACECQA, 2023)</span>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Learning Experiences -->
+    <div class="experiences-section fade-in">
+      <h3 class="exp-title">Learning Experiences Across Age Groups</h3>
+      <p class="exp-subtitle">One intentional, evidence-based wellbeing learning experience per developmental age group</p>
+      <div class="three-col">
+
+        <!-- 0-2 -->
+        <div class="age-card">
+          <div class="age-card-header">
+            <div class="age-badge">0–2 Years</div>
+            <div class="age-card-title">"Cuddle &amp; Connect"</div>
+            <div class="age-card-subtitle">Secure Attachment &amp; Relational Play</div>
+          </div>
+          <div class="age-card-body">
+            <div class="age-field">
+              <div class="age-field-label">Learning Intention</div>
+              <div class="age-field-text">The educators will develop secure attachments to their students through direct face-to-face contact which establishes trust and builds connections to create a safe learning environment.</div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Experience Description</div>
+              <div class="age-field-text">The teacher uses their function at school to interact with infants by conducting floor time. The teacher uses warm responses to mimic the sounds which the infant produces and to create facial expressions which extend their interaction. The basic peek-a-boo game which uses a soft scarf shows children how objects stay hidden and brings them back to life. The teacher uses Auslan signs for "more," "eat," and "done" to support emerging communication. The experience requires no digital devices and lets children choose their own activities at their own pace.</div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Key Learning Areas</div>
+              <div class="age-field-text">Secure attachment · Communication · Emotional security · EYLF Outcomes 1, 2, 3 <span class="cite-small">(AGDE, 2022)</span></div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Pedagogical Approach</div>
+              <div class="age-field-text">Serve-and-return interaction, relational caregiving, and co-regulation <span class="cite-small">(Mashford-Scott &amp; Church, 2022)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2-3 -->
+        <div class="age-card">
+          <div class="age-card-header">
+            <div class="age-badge">2–3 Years</div>
+            <div class="age-card-title">"How Are You Feeling?"</div>
+            <div class="age-card-subtitle">Emotion Language &amp; Mirror Play</div>
+          </div>
+          <div class="age-card-body">
+            <div class="age-field">
+              <div class="age-field-label">Learning Intention</div>
+              <div class="age-field-text">To expand toddlers' emotional vocabulary, support early recognition and naming of emotions in themselves and others, and build a foundation for empathy and self-regulation.</div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Experience Description</div>
+              <div class="age-field-text">The room contains a mirror which cannot be broken and emotional photo cards of children who show different emotions according to their various ethnic backgrounds. The teacher and children pull facial expressions together in the mirror, naming each emotion: <em>"That's your surprised face — look at your big eyes!"</em> The morning routine includes a "feelings check-in" which requires children to identify their emotions through the "How are you feeling?" board by placing their photo peg. The teacher shows her vulnerability by saying <em>"I feel a little tired today — and that's okay!"</em></div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Key Learning Areas</div>
+              <div class="age-field-text">Emotional literacy · Empathy · Self-awareness · EYLF Outcomes 1, 3 <span class="cite-small">(AGDE, 2022)</span></div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Pedagogical Approach</div>
+              <div class="age-field-text">Emotion coaching, reflective play, routine-based check-in, and modelling emotional honesty <span class="cite-small">(Mashford-Scott &amp; Church, 2022; AGDE, 2022)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3-5 -->
+        <div class="age-card">
+          <div class="age-card-header">
+            <div class="age-badge">3–5 Years</div>
+            <div class="age-card-title">"Breathe with Me"</div>
+            <div class="age-card-subtitle">Mindfulness, Regulation &amp; Nature-Based Play</div>
+          </div>
+          <div class="age-card-body">
+            <div class="age-field">
+              <div class="age-field-label">Learning Intention</div>
+              <div class="age-field-text">To introduce children to evidence-based mindfulness and self-regulation strategies, building the capacity to notice inner states and use calming strategies independently.</div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Experience Description</div>
+              <div class="age-field-text">The afternoon program includes a daily "mindful moment" which lasts between 3 and 5 minutes. The teacher uses <strong>"belly breathing"</strong> (hands on tummy, deep breath in through nose, slow out through mouth) together with a "calm corner" which contains a sensory bottle, fidget tools, nature objects, and visual breathing anchor charts. The outdoor space becomes a learning environment where children practice nature mindfulness by observing five visible objects and four touchable items and three audible sounds while they learn to connect their breath with their awareness of the environment. The children work together to create a class book which contains "calm strategies" that they all contributed.</div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Key Learning Areas</div>
+              <div class="age-field-text">Mindfulness · Self-regulation · Connection to nature · EYLF Outcomes 1, 2, 3 <span class="cite-small">(AGDE, 2022)</span></div>
+            </div>
+            <div class="age-field">
+              <div class="age-field-label">Pedagogical Approach</div>
+              <div class="age-field-text">Mindfulness-based practice, nature pedagogy, and self-regulation skill building <span class="cite-small">(Mashford-Scott &amp; Church, 2022; AGDE, 2022)</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- REFERENCES -->
+<!-- ===================================================== -->
+<section class="references-section" id="references">
+  <div class="ref-inner">
+    <h2 class="ref-heading">References</h2>
+    <p class="ref-subheading">All sources are current (2020–2025), peer-reviewed or authoritative professional documents, in APA 7th Edition format</p>
+
+    <ul class="ref-list">
+
+      <span class="ref-section-label">▸ Government &amp; Regulatory Bodies</span>
+
+      <li>Australian Children's Education &amp; Care Quality Authority. (2023). <em>Guide to the National Quality Framework</em> (Updated ed.). ACECQA. https://www.acecqa.gov.au/resources/national-quality-framework</li>
+
+      <li>Australian Government Department of Education. (2022). <em>Belonging, being and becoming: The Early Years Learning Framework for Australia</em> (V2.0). Australian Government. https://www.acecqa.gov.au/media/26486</li>
+
+      <li>Australian Government Department of Health and Aged Care. (2022). <em>Infant feeding guidelines: Information for health workers</em> (Updated ed.). National Health and Medical Research Council. https://www.nhmrc.gov.au/health-advice/nutrition/infant-feeding-guidelines</li>
+
+      <li>Australian Government Department of Health and Aged Care. (2022). <em>Get up &amp; grow: Healthy eating and physical activity for early childhood</em> (2nd ed.). Australian Government. https://www.health.gov.au/resources/publications/get-up-grow-healthy-eating-and-physical-activity-for-early-childhood-staff-and-carer-book</li>
+
+      <li>NSW Health. (2022). <em>Staying healthy: Preventing infectious diseases in early childhood education and care services</em> (6th ed.). NSW Government. https://www.health.nsw.gov.au/Infectious/stayinghealthy/Pages/default.aspx</li>
+
+      <li>Safe Work Australia. (2022). <em>Managing the work environment and facilities: Code of practice</em>. Australian Government. https://www.safeworkaustralia.gov.au/resources-and-publications/model-codes-practice</li>
+
+      <li>World Health Organization. (2021). <em>Comprehensive mental health action plan 2013–2030</em>. WHO. https://www.who.int/publications/i/item/9789240031029</li>
+
+      <span class="ref-section-label">▸ Academic Journal Articles</span>
+
+      <li>Canning, N. (2020). Children's empowerment in play: The role of risky play in early childhood education. <em>Early Child Development and Care, 190</em>(15), 2351–2363. https://doi.org/10.1080/03004430.2019.1577098</li>
+
+      <li>Cross, M., &amp; Ragusa, A. (2021). Child protection and mandatory reporting in early childhood education and care: Teacher knowledge, confidence, and practice. <em>Australasian Journal of Early Childhood, 46</em>(2), 112–124. https://doi.org/10.1177/18369391211009527</li>
+
+      <li>Goldfeld, S., Mithen, J., &amp; Williams, K. (2022). Children's health and developmental wellbeing in the early years: An Australian perspective on interdependency and early investment. <em>Journal of Paediatrics and Child Health, 58</em>(1), 23–31. https://doi.org/10.1111/jpc.15765</li>
+
+      <li>Mashford-Scott, A., &amp; Church, A. (2022). Promoting children's wellbeing in early childhood education: Relationships, environments, and intentional practice. <em>Early Childhood Education Journal, 50</em>(4), 589–601. https://doi.org/10.1007/s10643-021-01156-6</li>
+
+      <li>Nutton, G., &amp; Fraser, S. (2021). Nourishing minds and bodies: Pedagogical approaches to nutrition education in early childhood education and care settings. <em>Australian Journal of Early Childhood, 46</em>(3), 45–59. https://doi.org/10.1177/18369391211008872</li>
+
+    </ul>
+
+    <!-- Image Attributions -->
+    <div class="img-attrib-section">
+      <h3 class="img-attrib-title">Image Attributions</h3>
+      <ul class="img-attrib-list">
+        <li><strong>Poster 1 (Safety):</strong> Spratt, A. (Photographer). (n.d.). <em>Children in early childhood setting</em> [Photograph]. Unsplash. https://unsplash.com/photos/children-sitting-indoor-BgJt5FeewA0 — Unsplash licence (free to use without attribution, attributed for academic integrity)</li>
+        <li><strong>Poster 2 (Health):</strong> Curated Lifestyle (Photographer). (n.d.). <em>Child washing hands</em> [Photograph]. Unsplash. https://unsplash.com/photos/person-washing-hands-on-sink-rX12B5uX7QM — Unsplash licence (free to use)</li>
+        <li><strong>Poster 3 (Nutrition):</strong> Lark, B. (Photographer). (n.d.). <em>Colourful fresh food spread</em> [Photograph]. Unsplash. https://unsplash.com/photos/food-on-brown-wooden-chopping-board-jUPOXXRNdcA — Unsplash licence (free to use)</li>
+        <li><strong>Poster 4 (Wellbeing):</strong> Collins, R. (Photographer). (n.d.). <em>Children playing outdoors</em> [Photograph]. Unsplash. https://unsplash.com/photos/two-boys-playing-on-the-grass-tvcFbNV0J0s — Unsplash licence (free to use)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p class="footer-text">EPRO105 Assessment 3 · Digital Poster Series · Early Childhood Teacher's Role in Health, Safety, Nutrition &amp; Wellbeing · APA 7th Edition · All images Unsplash licence · References 2020–2025</p>
+</footer>
+
+<script>
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(el => {
+    if (el.isIntersecting) {
+      el.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Active nav tracking
+const sections = document.querySelectorAll('[id]');
+const navBtns = document.querySelectorAll('.nav-btn');
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navBtns.forEach(btn => btn.classList.remove('active'));
+      const active = document.querySelector(`.nav-btn[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { threshold: 0.3 });
+
+sections.forEach(s => sectionObserver.observe(s));
+</script>
+</body>
+</html>
